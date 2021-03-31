@@ -13,9 +13,10 @@ function App() {
       <header className="App-header">
       <Input placeholder="enter here" type="text"></Input>
         <h1 className="name title">Names List</h1>
-        <NameTag firstName="peter" lastName="johnson">Peter</NameTag>
-        <NameTag firstName="john" lastName="johnson">John</NameTag>
-        <NameTag firstName="jill" lastName="jillson">Jill</NameTag>
+        <NameTag firstName="peter" lastName="johnson"></NameTag>
+        <NameTag firstName="john" lastName="johnson"></NameTag>
+        <NameTag firstName="jill" lastName="jillson"></NameTag>
+        <NameTag ></NameTag>
       </header>
     </div>
   );
