@@ -27,7 +27,14 @@ const removeInline = (BaseComponent) => (props) => {
 const GreenNameTag = makeGreen(NameTag);
 const CleanNameTag = removeInline(NameTag);
 
+const initialNames = [
+  {firstName:"john", lastName: "johnson"},
+  {firstName:"peter", lastName: "peterson"},
+  {firstName:"jill", lastName: "jillson"}
+]
+
 function App() {
+  const [names, setNames] = useState(initialNames);
   // eslint-disable-next-line no-console
   console.log("hi");
   const [age, setAge] = useState(21);
@@ -48,9 +55,9 @@ function App() {
         <button onClick={ageUpHandle}>Age up</button>
         <button onClick={ageDownHandle}>Age down</button>
         <br/>
-        <GreenNameTag firstName="peter" lastName="johnson"></GreenNameTag>
-        <CleanNameTag firstName="john" lastName="johnson"></CleanNameTag>
-        <NameTag firstName="jill" lastName="jillson"></NameTag>
+        <GreenNameTag firstName={names[0].firstName} lastName={names[0].lastName}></GreenNameTag>
+        <CleanNameTag firstName={names[1].firstName} lastName={names[1].lastName}></CleanNameTag>
+        <NameTag firstName={names[2].firstName}  lastName={names[2].lastName}></NameTag>
         <NameTag></NameTag>
       </header>
     </div>
